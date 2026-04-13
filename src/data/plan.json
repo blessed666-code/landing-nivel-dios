@@ -1,0 +1,1414 @@
+{
+  "phases": [
+    {
+      "number": "FASE 1",
+      "title": "Fundamentos Lógico-Matemáticos y Frontend Web",
+      "description": "Semestres 1-2 · Lógica, Matemáticas, HTML/CSS, JavaScript, Álgebra Lineal",
+      "semesters": "S1 · S2"
+    },
+    {
+      "number": "FASE 2",
+      "title": "Desarrollo Full-Stack (Ecosistemas JS y Python)",
+      "description": "Semestres 3-5 · Node.js, React, FastAPI, Angular, Next.js, Automatización",
+      "semesters": "S3 · S4 · S5"
+    },
+    {
+      "number": "FASE 3",
+      "title": "Datos, Marketing y Operaciones Lean",
+      "description": "Semestres 6-8 · Data Engineering, BI, Data Science, Simulación, Lean",
+      "semesters": "S6 · S7 · S8"
+    },
+    {
+      "number": "FASE 4",
+      "title": "Inteligencia Artificial y DevOps",
+      "description": "Semestres 9-11 · ML, Deep Learning, NLP, Cloud, IA Generativa, K8s",
+      "semesters": "S9 · S10 · S11"
+    },
+    {
+      "number": "FASE 5",
+      "title": "Operaciones Nivel Dios y Arquitectura SaaS",
+      "description": "Semestres 12-14 · MLOps, CI/CD, IO Integral, Arquitectura SaaS Senior",
+      "semesters": "S12 · S13 · S14"
+    }
+  ],
+  "semesters": [
+    {
+      "id": "s1",
+      "number": "S1",
+      "title": "Lógica, Matemáticas Base y Maquetación",
+      "meta": "FASE 1 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Ruta de Matemáticas para Programación (Pensamiento Lógico, Aritmética, Geometría Analítica)",
+          "Configuración de Entorno, Terminal, Git y GitHub Profesional",
+          "Ruta de Desarrollo Web 2025 (HTML, CSS), Tailwind CSS, Accesibilidad Web (WCAG)",
+          "Ruta de Aprendizaje Continuo (Productividad y Gestión del Tiempo)"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Introducción a la Ingeniería Industrial: historia, sistemas productivos, enfoque sistémico",
+          "Fundamentos de Programación Lineal: conceptos de optimización, función objetivo, restricciones",
+          "Matemáticas de Ingeniería I: álgebra lineal aplicada, matrices y sistemas de ecuaciones",
+          "Herramientas: Excel Solver (introducción), PuLP básico en Python"
+        ]
+      },
+      "bibliography": [
+        {
+          "resource": "Introducción a la IO",
+          "author": "Hillier & Lieberman, 10a ed.",
+          "lang": "ES",
+          "area": "IO / PL"
+        },
+        {
+          "resource": "Investigación de Operaciones",
+          "author": "Hamdy A. Taha, 10a ed.",
+          "lang": "ES",
+          "area": "IO General"
+        },
+        {
+          "resource": "Cálculo, Vol. 1",
+          "author": "Stewart",
+          "lang": "ES",
+          "area": "Matemáticas"
+        },
+        {
+          "resource": "Álgebra Lineal y sus Aplicaciones",
+          "author": "David C. Lay",
+          "lang": "ES",
+          "area": "Álgebra"
+        }
+      ],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Dashboard de Sensores NAIU v0",
+          "description": "Web estática con Tailwind que muestra datos simulados de temperatura/humedad de galpones de hongos. Base de todos los dashboards futuros.",
+          "stack": "HTML, CSS, Tailwind CSS, Git",
+          "price": "Test gratis → S3 evoluciona",
+          "connect": "S3, S5, S10"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Gestión de Inventario de Esporas",
+          "description": "Script Python: entradas/salidas de esporas y sustratos con alertas de stock mínimo. Primer modelo de inventario.",
+          "stack": "Python, Excel/CSV, GitHub",
+          "price": "Test gratis → S7 evoluciona",
+          "connect": "S7, S13"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Optimizador de Mezcla de Sustrato (PL Simple)",
+          "description": "Formulación y solución manual + Excel Solver de la mezcla óptima de sustrato para hongos: maximizar nutrientes minimizando costo.",
+          "stack": "Excel Solver, PuLP intro, Python",
+          "price": "Test gratis",
+          "connect": "S7, S13"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Portafolio de Ingeniería Industrial",
+          "description": "Sitio personal estático 100% accesible (WCAG), responsivo con Tailwind. Documenta todos los proyectos. Landing de alto impacto profesional.",
+          "stack": "HTML, CSS, Tailwind, GitHub Pages",
+          "price": "Test gratis → base personal",
+          "connect": "Todos"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Agendamiento Inteligente v0 (WhatsApp + Calendly)",
+          "description": "Flujo básico: cliente escribe por WhatsApp → bot responde con link Calendly → confirmación automática + recordatorio 1h antes.",
+          "stack": "n8n, WhatsApp Business API, Calendly",
+          "price": "$80–$150 USD/mes",
+          "connect": "S3, S5"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Calculadora Matricial en JS",
+          "description": "Aplicación web que resuelve sistemas de ecuaciones y operaciones matriciales. Base matemática para IA.",
+          "stack": "JavaScript, DOM, GitHub Pages",
+          "price": "Test gratis / herramienta",
+          "connect": "S2, S8"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Análisis Climático Invernadero (Python)",
+          "description": "Script Python que lee CSV de sensores simulados, calcula promedios diarios/semanales y genera reporte HTML automático.",
+          "stack": "Python, Pandas básico, Matplotlib",
+          "price": "Test gratis → S3 evoluciona",
+          "connect": "S2, S6, S8"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "number": "S2",
+      "title": "JavaScript Profundo y Álgebra Lineal",
+      "meta": "FASE 1 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Escuela de JavaScript 2025 completa (ES12+, DOM, Async/Await, Promesas, Fetch API)",
+          "Álgebra Lineal para Machine Learning (Vectores, Matrices, SVD)",
+          "Prompt Engineering Avanzado, Introducción a la IA"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Programación Lineal Avanzada: Método Simplex manual y computacional, análisis de sensibilidad",
+          "Dualidad en PL: teorema dual, interpretación económica de variables duales",
+          "Análisis de Sensibilidad: rangos de optimidad, rangos de factibilidad",
+          "Software: PuLP en Python para resolver modelos de PL reales"
+        ]
+      },
+      "bibliography": [
+        {
+          "resource": "Introducción a la IO, Cap. 3-5 (Simplex)",
+          "author": "Hillier & Lieberman",
+          "lang": "ES",
+          "area": "PL / Simplex"
+        },
+        {
+          "resource": "IO, Cap. 2-4",
+          "author": "Taha",
+          "lang": "ES",
+          "area": "PL / Dualidad"
+        },
+        {
+          "resource": "Álgebra Lineal",
+          "author": "Gilbert Strang",
+          "lang": "EN",
+          "area": "Álgebra para IA"
+        },
+        {
+          "resource": "Python para Todos",
+          "author": "Charles R. Severance",
+          "lang": "ES",
+          "area": "Python"
+        }
+      ],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Calculadora de Mezcla de Sustrato (Simplex Web)",
+          "description": "Widget JavaScript que resuelve la mezcla óptima de sustrato con Simplex. El operario ingresa costos y el sistema devuelve la proporción ideal.",
+          "stack": "JavaScript, DOM, PuLP Python (API)",
+          "price": "Test gratis → S4 evoluciona",
+          "connect": "S1, S4"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Sistema de Recomendación de Riego v0",
+          "description": "Modelo probabilístico simple (reglas de asociación) que sugiere ciclos de riego según humedad histórica del invernadero.",
+          "stack": "Python, Pandas, GitHub",
+          "price": "Test gratis",
+          "connect": "S6, S8"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Resolución TSP Básico (Fuerza Bruta)",
+          "description": "Implementación en Python del Problema del Vendedor Viajero para N<=10 nodos. Base para S13 con algoritmos genéticos.",
+          "stack": "Python, NetworkX básico",
+          "price": "Test gratis",
+          "connect": "S4, S13"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Dashboard de KPIs de Producción (JS)",
+          "description": "Página web dinámica que muestra indicadores de producción (OEE simulado, rendimiento, calidad) consumiendo datos de un JSON local.",
+          "stack": "JavaScript, Chart.js, Tailwind",
+          "price": "$80–$150 USD/mes freelance",
+          "connect": "S5, S7"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Gestor de Reseñas Automático Google",
+          "description": "n8n detecta nueva reseña Google → IA genera respuesta personalizada → publica automáticamente. Alerta si reseña < 4 estrellas.",
+          "stack": "n8n, Google My Business API, OpenAI API",
+          "price": "$60–$120 USD/mes",
+          "connect": "S5"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Widget de Cotización Dinámica JS",
+          "description": "Formulario web insertable en páginas de clientes que calcula cotizaciones en tiempo real según variables del servicio. Vendible a PYMEs.",
+          "stack": "JavaScript puro, HTML, CSS",
+          "price": "$100–$200 USD/mes",
+          "connect": "S3"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Consumo de API Pública con Análisis",
+          "description": "Script Python que consume una API meteorológica pública, analiza tendencias climáticas y genera alertas para cultivos de hortalizas.",
+          "stack": "Python, Fetch/Requests, Matplotlib",
+          "price": "Test gratis",
+          "connect": "S6, S8"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "number": "S3",
+      "title": "Bases de Datos, Node.js y React",
+      "meta": "FASE 2 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Fundamentos de Bases de Datos, Modelo Entidad-Relación, SQL y PostgreSQL",
+          "Curso de React.js (Hooks, Estado, Componentes, Context API)",
+          "Ruta de Backend con Node.js (Express, APIs RESTful, Middlewares)"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Programación Entera (PE): variables binarias, problemas de asignación, Branch & Bound",
+          "Modelos de Redes: flujo máximo, ruta más corta, árbol de expansión mínima",
+          "Herramientas: OR-Tools de Google (introducción), Gurobi Academic",
+          "Casos reales: programación de turnos, problema de la mochila, asignación de tareas"
+        ]
+      },
+      "bibliography": [
+        {
+          "resource": "Introducción a la IO, Cap. 7-9 (PE y Redes)",
+          "author": "Hillier & Lieberman",
+          "lang": "ES",
+          "area": "PE / Redes"
+        },
+        {
+          "resource": "IO, Cap. 6-8 (Redes y PE)",
+          "author": "Taha",
+          "lang": "ES",
+          "area": "PE"
+        },
+        {
+          "resource": "Estructuras de Datos y Algoritmos con Python",
+          "author": "Kent D. Lee",
+          "lang": "ES",
+          "area": "Algoritmos"
+        },
+        {
+          "resource": "SQL: Guía de Referencia",
+          "author": "Ben Forta",
+          "lang": "ES",
+          "area": "Bases de Datos"
+        }
+      ],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "CRM Agrícola NAIU v1",
+          "description": "Frontend React + Backend Node.js + PostgreSQL para gestionar clientes de NAIU: cultivo, región, tamaño de pedido, seguimiento de ventas.",
+          "stack": "React, Node.js, Express, PostgreSQL, Docker básico",
+          "price": "Interno NAIU / $200–$400 USD/mes SaaS",
+          "connect": "S5, S11, S14"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Trazabilidad de Lotes de Siembra",
+          "description": "API REST Node.js + BD PostgreSQL que registra lotes de siembra, fechas, condiciones, cosecha. Dashboard React con historial completo.",
+          "stack": "Node.js, Express, PostgreSQL, React",
+          "price": "Test gratis → S9 evoluciona",
+          "connect": "S6, S9"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "API CRUD de Gestión de Producción",
+          "description": "API REST completa para gestionar órdenes de producción, inventario de MP y PT, y KPIs operativos. Base para el ERP industrial.",
+          "stack": "Node.js, Express, PostgreSQL",
+          "price": "$300–$600 USD/mes B2B",
+          "connect": "S5, S14"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Optimización de Asignación de Tareas (PE)",
+          "description": "Modelo de PE en Python (OR-Tools) para asignar operarios a máquinas minimizando costos, respetando restricciones de habilidades y turnos.",
+          "stack": "Python, OR-Tools, PostgreSQL",
+          "price": "Test gratis → S13 evoluciona",
+          "connect": "S7, S13"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Cotizaciones WhatsApp con IA",
+          "description": "Cliente describe su necesidad por WhatsApp → IA (Claude/GPT) genera cotización PDF → n8n la envía automáticamente al cliente.",
+          "stack": "n8n, WhatsApp Business API, OpenAI, PDF generation",
+          "price": "$100–$200 USD/mes",
+          "connect": "S5, S11"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Motor de Recomendación Simple (Filtro Colaborativo)",
+          "description": "Sistema que recomienda productos agrícolas a clientes según historial de compras y comportamiento similar de otros clientes.",
+          "stack": "Python, Scikit-learn básico, PostgreSQL",
+          "price": "Test gratis → S8 evoluciona",
+          "connect": "S4, S8"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Detección de Anomalías en Sensores IoT",
+          "description": "API Node.js que recibe lecturas de sensores del invernadero, aplica reglas estadísticas para detectar valores anómalos y dispara alertas.",
+          "stack": "Node.js, PostgreSQL, Statistical rules",
+          "price": "Test gratis → S9 evoluciona",
+          "connect": "S6, S9, S10"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "number": "S4",
+      "title": "Backend Python, FastAPI y Matemáticas Discretas",
+      "meta": "FASE 2 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Curso Profesional de Python 2025 (OOP, decoradores, generators)",
+          "FastAPI (autenticación JWT, validación Pydantic, async)",
+          "Django Fundamentos",
+          "Arquitectura de Software, Servidores, Vercel",
+          "Matemáticas Discretas (Teoría de Grafos, Combinatoria)"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Gestión de Inventarios: modelos EOQ, EPQ, punto de reorden, inventario de seguridad",
+          "Sistemas de Producción: MRP I y MRP II, programación de producción",
+          "Pronóstico de demanda: métodos cuantitativos (promedio móvil, suavización exponencial)",
+          "Herramientas: Python + SciPy para modelos de inventario, Excel avanzado"
+        ]
+      },
+      "bibliography": [
+        {
+          "resource": "Administración de Operaciones",
+          "author": "Chase, Aquilano & Jacobs, 12a ed.",
+          "lang": "ES",
+          "area": "Gestión Operaciones"
+        },
+        {
+          "resource": "Planificación y Control de la Producción",
+          "author": "Chapman",
+          "lang": "ES",
+          "area": "MRP / Inventarios"
+        },
+        {
+          "resource": "Introducción a la IO, Cap. 15-17 (Inventarios)",
+          "author": "Hillier & Lieberman",
+          "lang": "ES",
+          "area": "Inventarios"
+        },
+        {
+          "resource": "Matemáticas Discretas y sus Aplicaciones",
+          "author": "Rosen",
+          "lang": "ES",
+          "area": "Matemáticas"
+        }
+      ],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "API de Validación de Sensores IoT (FastAPI)",
+          "description": "API FastAPI que recibe lecturas de sensores de humedad/temperatura, las valida con modelos Pydantic y las almacena en PostgreSQL con alertas.",
+          "stack": "FastAPI, Pydantic, PostgreSQL, Docker",
+          "price": "Test gratis → S9 despliega",
+          "connect": "S3, S9, S10"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Modelo EOQ para Esporas y Sustratos NAIU",
+          "description": "Sistema Python que calcula el lote económico de pedido para cada insumo de NAIU, determina punto de reorden y genera órdenes de compra automáticas.",
+          "stack": "Python, SciPy, FastAPI, PostgreSQL",
+          "price": "Interno NAIU / $800–$2000 USD SaaS",
+          "connect": "S1, S7, S13"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Sistema de Pronóstico de Demanda",
+          "description": "Módulo Python que implementa promedio móvil, suavización exponencial y Holt-Winters para pronóstico de demanda. API REST con FastAPI.",
+          "stack": "Python, Statsmodels, FastAPI, React",
+          "price": "$250–$500 USD/mes",
+          "connect": "S6, S8, S13"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Optimizador de Grafos (Ruta Más Corta)",
+          "description": "API FastAPI que resuelve problemas de ruta más corta (Dijkstra, A*) para optimizar rutas de distribución de productos agrícolas.",
+          "stack": "Python, NetworkX, FastAPI",
+          "price": "Test gratis → S13 evoluciona",
+          "connect": "S2, S13"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Onboarding Automático de Clientes",
+          "description": "Pago confirmado → formulario personalizado → email de bienvenida con accesos → acceso a portal cliente creado automáticamente.",
+          "stack": "n8n, Stripe Webhooks, PostgreSQL, Email API",
+          "price": "$80–$180 USD/mes",
+          "connect": "S11, S14"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Sistema de AuthaaS con JWT (FastAPI)",
+          "description": "Microservicio de autenticación reutilizable: registro, login, refresh tokens, roles. Deployado en Vercel. Base para todos los SaaS futuros.",
+          "stack": "FastAPI, JWT, PostgreSQL, Vercel",
+          "price": "$50–$100 USD/mes / módulo",
+          "connect": "S11, S14"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Modelo MRP I en Python",
+          "description": "Implementación del cálculo MRP I: explosión de materiales, cálculo de necesidades netas, programación de órdenes. Interfaz web React.",
+          "stack": "Python, React, FastAPI, PostgreSQL",
+          "price": "$500–$1200 USD/mes ERP",
+          "connect": "S5, S13, S14"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "number": "S5",
+      "title": "Angular, Next.js y Automatización Industrial",
+      "meta": "FASE 2 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Desarrollo Frontend con Angular (componentes, servicios, RxJS)",
+          "Next.js (SSR, SSG, App Router, optimización SEO)",
+          "Ruta de Automatización con IA (n8n, Make, Zapier avanzado)",
+          "WhatsApp Business API avanzada"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Lean Manufacturing: principios, 7 desperdicios (Muda), Value Stream Mapping (VSM)",
+          "5S, Kaizen, Poka-Yoke, SMED: implementación y métricas",
+          "OEE (Overall Equipment Effectiveness): cálculo, análisis y mejora",
+          "Six Sigma introducción: DMAIC, métricas de capacidad de proceso (Cp, Cpk)"
+        ]
+      },
+      "bibliography": [
+        {
+          "resource": "Lean Thinking",
+          "author": "Womack & Jones",
+          "lang": "ES",
+          "area": "Lean Manufacturing"
+        },
+        {
+          "resource": "La Máquina que Cambió el Mundo",
+          "author": "Womack, Jones & Roos",
+          "lang": "ES",
+          "area": "Lean"
+        },
+        {
+          "resource": "Lean Manufacturing en Español",
+          "author": "Juan Carlos Hernández Matías",
+          "lang": "ES",
+          "area": "Lean Aplicado"
+        },
+        {
+          "resource": "The Goal",
+          "author": "Eliyahu Goldratt",
+          "lang": "ES",
+          "area": "Teoría de Restricciones"
+        }
+      ],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Dashboard Directivo NAIU (Angular)",
+          "description": "Panel Angular que consume la API FastAPI (S4) y muestra en tiempo real: estado galpones, OEE, inventario, ventas y alertas críticas de NAIU.",
+          "stack": "Angular, RxJS, Chart.js, FastAPI",
+          "price": "Interno NAIU / demo para clientes",
+          "connect": "S3, S4, S14"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "VSM Digital de Producción de Hongos",
+          "description": "Herramienta web interactiva en React/Next.js para mapear el flujo de valor de producción de hongos. Identifica desperdicios y calcula OEE.",
+          "stack": "Next.js, React, D3.js",
+          "price": "$300–$600 USD/mes consultoría",
+          "connect": "S8, S13"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Blog SEO de Ingeniería Industrial con IA",
+          "description": "n8n + Claude genera artículos técnicos de IO/Lean semanalmente → tú apruebas en Telegram → se publica automáticamente. Genera autoridad.",
+          "stack": "n8n, Claude API, WordPress/Notion, Telegram",
+          "price": "$80–$150 USD/mes",
+          "connect": "S7, S11"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Sistema Lean 5S Digital",
+          "description": "App Next.js para auditorías 5S digitales: checklist, fotos, puntuación automática, reporte PDF generado al instante, historial de mejoras.",
+          "stack": "Next.js, PostgreSQL, PDF generation, Docker",
+          "price": "$200–$400 USD/mes",
+          "connect": "S9, S12"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Publicación RRSS Automática con IA",
+          "description": "Notion/Airtable como CMS → n8n + IA genera copy y diseño → publica automáticamente en IG, FB y LinkedIn con hashtags optimizados.",
+          "stack": "n8n, OpenAI, Canva API, Meta Graph API",
+          "price": "$80–$150 USD/mes",
+          "connect": "S7"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Bot WhatsApp para Ventas NAIU",
+          "description": "Bot multicanal: cliente consulta por WhatsApp → bot segmenta por cultivo/región/tamaño → ofrece producto correcto → genera orden de pedido.",
+          "stack": "WhatsApp Business API, n8n, OpenAI, FastAPI",
+          "price": "$300–$700 USD/mes",
+          "connect": "S3, S11"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Panel de Administración Angular (Modular)",
+          "description": "Panel modular reutilizable en Angular con autenticación, gestión de usuarios, roles y permisos. Base para todos los SaaS del portafolio.",
+          "stack": "Angular, JWT, FastAPI, PostgreSQL",
+          "price": "$200–$500 USD/mes como módulo",
+          "connect": "S11, S14"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "number": "S6",
+      "title": "Ingeniería de Datos y Web Scraping",
+      "meta": "FASE 3 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Ingeniería de Datos: ETLs, Apache Airflow, Data Warehousing",
+          "Manejo de Datos a Gran Escala (Spark, Kafka intro)",
+          "Web Scraping con Python y Playwright"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Simulación Industrial I: conceptos, tipos de simulación, simulación de eventos discretos",
+          "SimPy en Python: colas, recursos, procesos estocásticos",
+          "Teoría de Colas: modelos M/M/1, M/M/c, M/G/1 y aplicaciones industriales",
+          "Distribuciones de probabilidad para simulación: ajuste de datos con scipy.stats"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Pipeline ETL de Sensores NAIU (Airflow)",
+          "description": "Pipeline Apache Airflow que consolida diariamente datos de temperatura, humedad y CO2 de los galpones en un Data Warehouse PostgreSQL centralizado.",
+          "stack": "Apache Airflow, PostgreSQL, Python, Docker",
+          "price": "Interno NAIU",
+          "connect": "S3, S4, S7, S9"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Simulación de Cola de Pedidos NAIU (SimPy)",
+          "description": "Modelo SimPy que simula el proceso de recepción, empaque y despacho de pedidos de hongos. Identifica cuellos de botella y propone mejoras.",
+          "stack": "Python, SimPy, Matplotlib, Jupyter",
+          "price": "$500–$1500 consultoría",
+          "connect": "S8, S13"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Scraper de Precios de Insumos Agrícolas",
+          "description": "Playwright scraper que extrae precios de fertilizantes, sustratos y empaques de principales proveedores. Genera alerta si precio sube >5%.",
+          "stack": "Python, Playwright, PostgreSQL, n8n",
+          "price": "$250–$500 USD/mes",
+          "connect": "S7, S13"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Modelo de Teoría de Colas para Planta",
+          "description": "Análisis M/M/c de las estaciones de trabajo de una planta: calcula tiempo de espera, utilización y recomienda número óptimo de operarios.",
+          "stack": "Python, SciPy, SimPy, FastAPI, React",
+          "price": "$800–$2000 consultoría",
+          "connect": "S8, S13"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Inteligencia Competitiva Automatizada",
+          "description": "Scraping semanal de precios y ofertas de competidores → análisis comparativo con IA → reporte ejecutivo PDF enviado por email/Telegram.",
+          "stack": "Playwright, n8n, OpenAI, Python",
+          "price": "$250–$500 USD/mes",
+          "connect": "S7, S11"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Data Warehouse Agrícola (Modelo Estrella)",
+          "description": "Diseño e implementación de Data Warehouse con esquema estrella: hechos de producción, dimensiones de tiempo, producto, cliente y condición climática.",
+          "stack": "PostgreSQL, dbt, Airflow, Python",
+          "price": "$500–$1200 USD setup + $200/mes",
+          "connect": "S7, S9"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Pipeline de Datos IoT en Tiempo Real",
+          "description": "Kafka + Python consumer que procesa streams de sensores IoT del invernadero en tiempo real, detecta anomalías y las almacena para ML.",
+          "stack": "Apache Kafka, Python, PostgreSQL, Docker",
+          "price": "Test gratis → S10 evoluciona",
+          "connect": "S9, S10"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "number": "S7",
+      "title": "Business Intelligence y Marketing Automático",
+      "meta": "FASE 3 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Business Intelligence: Power BI, Tableau, SQL Analítico (Window Functions)",
+          "Marketing Digital, Social Media, Publicidad Digital y Paid Media (Meta Ads)",
+          "IA para Content Marketing y Growth Hacking"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Gestión de la Cadena de Suministro (SCM): diseño de redes, selección de proveedores",
+          "Logística y Distribución: modelos de transporte, problema de asignación",
+          "Método de Transporte (Vogel, esquina noroeste, MODI): resolución manual y computacional",
+          "KPIs de Supply Chain: OTIF, fill rate, rotación de inventario, días de inventario"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Dashboard BI Operativo NAIU (Power BI / Tableau)",
+          "description": "Dashboard ejecutivo que cruza costos de insumos (scraping S6) vs mermas internas vs ventas. KPIs OTIF, fill rate, OEE en tiempo real para NAIU.",
+          "stack": "Power BI / Tableau, PostgreSQL, Python",
+          "price": "$1200–$3500 USD/mes",
+          "connect": "S6, S9, S12"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Modelo de Transporte para Distribución NAIU",
+          "description": "Modelo de programación lineal (método de transporte) que optimiza la distribución de hongos/hortalizas desde granjas hasta puntos de venta.",
+          "stack": "Python, PuLP, OR-Tools, React",
+          "price": "Interno + $800–$2000 consultoría",
+          "connect": "S4, S13"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Sistema de Reportes BI Automatizado para Clientes",
+          "description": "Pipeline que toma datos de clientes, genera dashboards Power BI automáticamente y envía PDF del reporte semanal vía email/n8n cada lunes.",
+          "stack": "n8n, Power BI API, Python, Email API",
+          "price": "$1200–$3500 USD/mes",
+          "connect": "S6, S12"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Optimizador de Red de Distribución (VRP Básico)",
+          "description": "Resolución del Vehicle Routing Problem básico con OR-Tools para flotas de reparto: minimiza distancia total respetando capacidades y ventanas de tiempo.",
+          "stack": "Python, OR-Tools, FastAPI, React Maps",
+          "price": "$1000–$3000 USD/mes SaaS",
+          "connect": "S13"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Meta Ads con IA Completo",
+          "description": "Brief del cliente → IA genera 10 imágenes + 10 copies + 3 videos → n8n lanza campañas automáticamente → reporte de rendimiento semanal.",
+          "stack": "n8n, OpenAI, Meta Graph API, Canva API",
+          "price": "$300–$600 USD/mes",
+          "connect": "S5, S11"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Predicción de Demanda con Series Temporales",
+          "description": "Modelos de pronóstico (ARIMA, Prophet, Holt-Winters) para predecir demanda de hongos/hortalizas por región. API REST para consumo desde ERP.",
+          "stack": "Python, Prophet, Statsmodels, FastAPI",
+          "price": "$250–$500 USD/mes",
+          "connect": "S4, S8, S13"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Campaña de Content Marketing 100% IA",
+          "description": "Pipeline: tema del mes → Claude genera artículo + imágenes IA → tú apruebas en Telegram → se publica en blog + RRSS. Vendible a cualquier empresa.",
+          "stack": "n8n, Claude API, WordPress API, Buffer",
+          "price": "$80–$150 USD/mes",
+          "connect": "S5, S11"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "number": "S8",
+      "title": "Data Science, Probabilidad y Lean Ops",
+      "meta": "FASE 3 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Probabilidad y Estadística Avanzada, Cálculo para Data Science",
+          "Manipulación de Datos con Pandas y NumPy (nivel profesional)",
+          "Ruta de Desarrollo de Producto y Operaciones Lean (VSM, 5S)"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Simulación Industrial II: Monte Carlo avanzado, análisis de riesgo, simulación de supply chain",
+          "Métodos Determinísticos vs Probabilísticos: cuándo usar cada enfoque",
+          "Programación Estocástica: optimización bajo incertidumbre, escenarios, Value-at-Risk",
+          "Lean 4.0: integración de Lean con IoT, Big Data e IA para manufactura inteligente"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Simulación Monte Carlo de Supply Chain NAIU",
+          "description": "10.000 simulaciones de variabilidad climática, demanda y tiempos de cosecha. Dashboard de riesgo ejecutivo con percentiles P10, P50, P90.",
+          "stack": "Python, NumPy, SimPy, Plotly, FastAPI",
+          "price": "$1500–$4000 USD",
+          "connect": "S6, S13"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Análisis Lean: Eliminación de Muda en Hortalizas",
+          "description": "EDA profundo con Pandas para detectar causas raíz de pérdida de calidad en hortalizas. VSM digital con identificación de desperdicios y plan de mejora.",
+          "stack": "Python, Pandas, Jupyter, Plotly, Next.js",
+          "price": "$500–$1500 consultoría",
+          "connect": "S5, S13"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Auditoría Lean Automatizada (Infoproducto)",
+          "description": "Sistema web que guía al cliente en una auditoría Lean de sus procesos de venta digital: VSM digital, identificación de desperdicios, reporte PDF automático.",
+          "stack": "Next.js, FastAPI, PDF gen, Stripe",
+          "price": "$200–$400 USD/mes SaaS",
+          "connect": "S5, S12"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Dashboard de Riesgo en Supply Chain (Estocástico)",
+          "description": "Modelo estocástico que evalúa riesgo en la cadena de suministro bajo distintos escenarios (precio, demanda, tiempo). Visualización Power BI.",
+          "stack": "Python, SimPy, Power BI, FastAPI",
+          "price": "$1500–$4000 USD/mes",
+          "connect": "S7, S13"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Pipeline de Ventas IA (Lead Scoring + Nurturing)",
+          "description": "Lead entra → IA lo puntúa según perfil → secuencia multicanal personalizada (WhatsApp + Email) → alerta al vendedor cuando probabilidad de compra > 70%.",
+          "stack": "n8n, OpenAI, CRM PostgreSQL, WhatsApp",
+          "price": "$300–$700 USD/mes",
+          "connect": "S3, S11"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "EDA de Producción Agrícola (Jupyter Profesional)",
+          "description": "Notebook completo de análisis exploratorio de datos de producción de hongos: distribuciones, correlaciones, outliers, hipótesis estadísticas. Publicado en GitHub.",
+          "stack": "Python, Pandas, Seaborn, Scipy, Jupyter",
+          "price": "Test gratis / portafolio",
+          "connect": "S3, S9"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Modelo Bayesiano de Diagnóstico de Plagas",
+          "description": "Clasificador bayesiano que determina probabilidad de plaga/enfermedad dado un conjunto de síntomas observados en el cultivo. API FastAPI.",
+          "stack": "Python, PyMC, Scikit-learn, FastAPI",
+          "price": "Test gratis → S10 evoluciona",
+          "connect": "S9, S10"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "number": "S9",
+      "title": "Machine Learning Clásico y Docker",
+      "meta": "FASE 4 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Fundamentos de Machine Learning (bias-variance tradeoff, validación cruzada)",
+          "ML con Scikit-Learn: Regresión, Clasificación, Árboles de Decisión, SVM",
+          "Docker y Contenedores (Dockerfile, Docker Compose, redes)"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Programación No Lineal (PNL): optimización con y sin restricciones, KKT",
+          "Métodos de gradiente: Newton, Quasi-Newton, descenso de gradiente estocástico",
+          "Convexidad: funciones convexas, problemas de optimización convexa",
+          "Conexión PNL ↔ ML: el entrenamiento de redes neuronales como PNL"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Clasificador de Calidad de Hongos (ML)",
+          "description": "Modelo Scikit-learn (Random Forest) que clasifica calidad (A/B/C) de hongos según tamaño, peso, color y condiciones de cultivo. Dockerizado.",
+          "stack": "Python, Scikit-learn, Docker, FastAPI",
+          "price": "Test gratis → S12 en prod.",
+          "connect": "S3, S12"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Predictor de Éxito de Lote de Siembra",
+          "description": "Clasificador que predice si un lote será exitoso basado en variables históricas (temperatura, humedad, sustrato, cepa). 85%+ accuracy objetivo.",
+          "stack": "Python, Scikit-learn, Pandas, FastAPI",
+          "price": "Interno NAIU / portafolio",
+          "connect": "S3, S12"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Microservicio ML de Scoring de Leads (Dockerizado)",
+          "description": "Modelo ML dockerizado que recibe datos de un lead (industria, tamaño, presupuesto) y devuelve probabilidad de conversión. Vendible vía API.",
+          "stack": "Python, Scikit-learn, Docker, FastAPI, GitHub Actions",
+          "price": "$300–$700 USD/mes",
+          "connect": "S8, S12"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Mantenimiento Predictivo con ML (Sensores)",
+          "description": "Modelo de clasificación que predice fallo inminente de maquinaria basado en vibración, temperatura y horas de operación. Conecta con OT vía n8n.",
+          "stack": "Python, Scikit-learn, Kafka, n8n, Docker",
+          "price": "$2000–$6000 USD/mes",
+          "connect": "S6, S12"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Facturación DIAN Automática",
+          "description": "Venta detectada (Stripe/WooCommerce) → factura electrónica DIAN generada → enviada al cliente por email/WhatsApp → registrada en contabilidad.",
+          "stack": "n8n, DIAN API / Siigo, WhatsApp, Email",
+          "price": "$200–$400 USD/mes",
+          "connect": "S4, S11"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Regresión para Predicción de Rendimiento de Cultivo",
+          "description": "Modelo de regresión (XGBoost) que predice biomasa/rendimiento de hongos u hortalizas según variables ambientales. API FastAPI dockerizada.",
+          "stack": "Python, XGBoost, Docker, FastAPI, PostgreSQL",
+          "price": "$250–$500 USD/mes",
+          "connect": "S4, S10"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Pipeline ML End-to-End Dockerizado",
+          "description": "Pipeline completo: ingesta datos → preprocesamiento → entrenamiento → evaluación → deployment de modelo en Docker. Base para MLOps en S12.",
+          "stack": "Python, Scikit-learn, Docker, MLflow básico",
+          "price": "Test gratis / portafolio",
+          "connect": "S12"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "number": "S10",
+      "title": "Deep Learning, NLP y Cloud",
+      "meta": "FASE 4 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Redes Neuronales y Deep Learning (PyTorch / TensorFlow)",
+          "Procesamiento del Lenguaje Natural (NLP), RNNs, LSTMs, Transformers intro",
+          "Visión Artificial (OpenCV, YOLO v8+)",
+          "Cloud Computing: AWS (EC2, S3, Lambda, SageMaker) y GCP (Vertex AI)"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Programación Dinámica (PD): principio de optimalidad, ecuación de Bellman",
+          "Aplicaciones de PD: inventarios dinámicos, secuenciación de producción, ruteo",
+          "Conexión PD ↔ Reinforcement Learning: MDPs, políticas óptimas",
+          "Optimización multi-objetivo: método de la suma ponderada, Pareto, NSGA-II"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Visión Artificial: Detección de Contaminación Fúngica (YOLO)",
+          "description": "Sistema YOLO desplegado en Raspberry Pi / cámara IoT que detecta contaminación fúngica temprana en galpones de hongos con alertas automáticas.",
+          "stack": "YOLOv8, PyTorch, OpenCV, Raspberry Pi, n8n",
+          "price": "$2000–$6000 USD instalación",
+          "connect": "S6, S12"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Predicción de Series Temporales Climáticas (LSTM)",
+          "description": "Red LSTM que predice temperatura y humedad del invernadero 24-72h hacia adelante para anticipar condiciones adversas y ajustar controles.",
+          "stack": "PyTorch, LSTM, FastAPI, Docker, AWS",
+          "price": "Interno NAIU / $500/mes SaaS",
+          "connect": "S6, S12"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "SaaS de Análisis de Sentimiento para Reseñas (NLP)",
+          "description": "API que analiza reseñas de restaurantes/e-commerce con modelos NLP (BERT fine-tuned). Dashboard de tendencias. Desplegado en AWS Lambda.",
+          "stack": "PyTorch, Transformers, FastAPI, AWS Lambda",
+          "price": "$250–$500 USD/mes",
+          "connect": "S11, S12"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Optimización Dinámica de Inventario (PD + ML)",
+          "description": "Política de reorden dinámica que combina programación dinámica con predicción de demanda ML. Minimiza costo total de inventario bajo incertidumbre.",
+          "stack": "Python, PyTorch, OR-Tools, FastAPI",
+          "price": "$800–$2000 USD/mes",
+          "connect": "S4, S13"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Soporte Omnicanal IA (WhatsApp + Email + IG)",
+          "description": "Un inbox unificado: WhatsApp + Email + Instagram → IA responde automáticamente → escala a humano si complejidad > umbral. Dashboard de tickets.",
+          "stack": "n8n, OpenAI, WhatsApp API, Gmail API, React",
+          "price": "$250–$500 USD/mes",
+          "connect": "S3, S11"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "CNN para Clasificación de Especies (Transfer Learning)",
+          "description": "Red ResNet50 fine-tuned para clasificar especies de hongos y variedades de hortalizas desde imágenes. API REST en AWS con auto-scaling.",
+          "stack": "PyTorch, ResNet50, FastAPI, AWS SageMaker",
+          "price": "$200–$500 USD/mes",
+          "connect": "S9, S12"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Servidor AWS/GCP con Modelo ML en Producción",
+          "description": "Despliegue completo de un modelo de predicción en EC2/GCP Compute Engine con HTTPS, load balancing, monitoring básico con CloudWatch.",
+          "stack": "AWS EC2, GCP, Docker, Nginx, Python",
+          "price": "Infraestructura para proyectos",
+          "connect": "S12"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "number": "S11",
+      "title": "IA Generativa, LangChain y Kubernetes",
+      "meta": "FASE 4 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "IA Generativa: LangChain, LangGraph, Agentes Autónomos (ReAct, Tool Use)",
+          "Voz con IA: ElevenLabs, Whisper, Text-to-Speech pipelines",
+          "Kubernetes (K8s): pods, deployments, services, Helm charts",
+          "Terraform (Infrastructure as Code)"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Metaheurísticas I: Algoritmos Genéticos (AG) — representación, selección, cruce, mutación",
+          "Metaheurísticas II: Simulated Annealing, Búsqueda Tabú, GRASP",
+          "Optimización Combinatoria: TSP, VRP, Job Shop Scheduling con metaheurísticas",
+          "Librería DEAP (Python) para algoritmos evolutivos"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Ingeniero Agrónomo Virtual (Agente IA)",
+          "description": "Agente LangChain entrenado con literatura agrotécnica de hongos/hortalizas. Responde consultas de operarios, diagnostica problemas y sugiere acciones correctivas.",
+          "stack": "LangChain, RAG, OpenAI/Claude, FastAPI, K8s",
+          "price": "$500–$1500 USD/mes",
+          "connect": "S8, S14"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Recuperación de Carrito + Voz IA NAIU",
+          "description": "2h sin pago → n8n detecta → WhatsApp personalizado → si no responde en 1h → llamada de voz IA (ElevenLabs) con nombre del cliente.",
+          "stack": "n8n, ElevenLabs, WhatsApp, Twilio, OpenAI",
+          "price": "Interno NAIU → $300/mes SaaS",
+          "connect": "S5, S14"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Empleado Autónomo de Ventas (Agente Multicanal)",
+          "description": "Agente IA que negocia, cotiza y agenda reuniones de ventas de forma autónoma por Voz + WhatsApp. Integrado con CRM. El agente más rentable del portafolio.",
+          "stack": "LangGraph, ElevenLabs, WhatsApp, Calendly, CRM",
+          "price": "$300–$700 USD/mes",
+          "connect": "S3, S5, S14"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Scheduling con Algoritmos Genéticos (Job Shop)",
+          "description": "Resolución del Job Shop Scheduling Problem con AG usando DEAP. Minimiza makespan. Interfaz web para cargar instancias y visualizar cronograma Gantt.",
+          "stack": "Python, DEAP, FastAPI, React, D3.js (Gantt)",
+          "price": "$1000–$3000 consultoría",
+          "connect": "S13"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Recuperación de Pagos + Voz Automatizada",
+          "description": "Pago fallido → WhatsApp automático → si no paga en 24h → llamada de voz IA con oferta especial → reporte de recuperación al negocio.",
+          "stack": "n8n, Stripe Webhooks, ElevenLabs, WhatsApp",
+          "price": "$200–$500 USD/mes",
+          "connect": "S4, S14"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Clon de ChatGPT con LangChain (Personalizable)",
+          "description": "Asistente conversacional con memoria, herramientas y personalidad configurable. Multi-tenant: cada empresa tiene su propio asistente. Desplegado en K8s.",
+          "stack": "LangChain, OpenAI, React, K8s, PostgreSQL",
+          "price": "$300–$800 USD/mes",
+          "connect": "S12, S14"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Arquitectura K8s de 3 Capas (Producción)",
+          "description": "Clúster Kubernetes local (Minikube) con Frontend, API Gateway y Microservicios ML. Base de la arquitectura de despliegue de todos los proyectos senior.",
+          "stack": "Kubernetes, Helm, Terraform, Docker, GitHub Actions",
+          "price": "Infraestructura del portafolio",
+          "connect": "S12, S14"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "number": "S12",
+      "title": "MLOps, CI/CD y Seguridad",
+      "meta": "FASE 5 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Ruta de CI/CD: GitHub Actions, Jenkins, pruebas unitarias y de integración",
+          "Machine Learning Engineering for Production (MLOps) — Coursera DeepLearning.AI",
+          "Seguridad Informática para Desarrolladores (OWASP, pentesting básico)"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Lean 4.0 Avanzado: gemelos digitales, fábricas inteligentes, IIoT",
+          "Six Sigma Avanzado: DFSS, DOE (Diseño de Experimentos), ANOVA",
+          "Gestión de Calidad Total (TQM): ISO 9001, métricas de calidad, costo de calidad",
+          "Industria 4.0: arquitectura CPS (Cyber-Physical Systems), estándares IEC"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "CI/CD para Modelos NAIU (Reentrenamiento Auto)",
+          "description": "Pipeline GitHub Actions que, al detectar data drift en el modelo de visión artificial (S10), lanza reentrenamiento automático, valida métricas y despliega a producción.",
+          "stack": "GitHub Actions, MLflow, Docker, K8s, PostgreSQL",
+          "price": "Interno NAIU",
+          "connect": "S9, S10, S11"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Sistema de Monitoreo de Data Drift NAIU",
+          "description": "Dashboard que monitorea en tiempo real la distribución de datos de sensores vs. los datos de entrenamiento. Detecta drift y genera alertas automáticas.",
+          "stack": "Python, Evidently AI, FastAPI, React, K8s",
+          "price": "$1200–$3500 USD/mes",
+          "connect": "S6, S9, S14"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Plataforma MLOps para Clientes Corporativos",
+          "description": "SaaS que monitorea data drift y model drift de los modelos ML de empresas clientes. Envía alertas, genera reportes de salud del modelo y sugiere reentrenamiento.",
+          "stack": "Python, Evidently, MLflow, FastAPI, React, K8s",
+          "price": "$1200–$3500 USD/mes",
+          "connect": "S9, S14"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "DOE Automatizado para Optimización de Cultivos",
+          "description": "Sistema de Diseño de Experimentos (factorial 2^k) automatizado: genera el plan experimental, analiza resultados con ANOVA y recomienda condiciones óptimas.",
+          "stack": "Python, SciPy, statsmodels, React, FastAPI",
+          "price": "$800–$2000 consultoría",
+          "connect": "S8, S13"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "BI Ejecutivo con Alertas Predictivas (CEO Dashboard)",
+          "description": "Datos ERP/PostgreSQL → limpieza automática → dashboard Metabase/Looker → alertas predictivas al CEO si KPI baja del umbral. Completamente autónomo.",
+          "stack": "Python, Metabase, n8n, PostgreSQL, ML alerts",
+          "price": "$1200–$3500 USD/mes",
+          "connect": "S7, S14"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Pipeline CI/CD Completo con Pruebas ML",
+          "description": "Pipeline que ejecuta: linting → tests unitarios → test de modelo (accuracy threshold) → build Docker → push ECR → deploy K8s. Todo automático en push.",
+          "stack": "GitHub Actions, pytest, Docker, ECR, K8s",
+          "price": "Infraestructura / portafolio",
+          "connect": "S11, S14"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Pentesting a Infraestructura AWS Propia",
+          "description": "Auditoría de seguridad a los servidores propios: escaneo de puertos, vulnerabilidades OWASP en APIs, reporte de hallazgos y plan de mitigación.",
+          "stack": "Kali Linux, Nmap, OWASP ZAP, Burp Suite",
+          "price": "Servicio $500–$2000/auditoría",
+          "connect": "S14"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "number": "S13",
+      "title": "Investigación de Operaciones: El Core Industrial",
+      "meta": "FASE 5 | Platzi 14h/sem + IO Autónoma 20h/sem = 34h totales/sem (sprint final IO)",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Algoritmos Avanzados (complejidad, NP-hard)",
+          "SimPy: simulación de eventos discretos avanzada",
+          "Discrete Optimization — Coursera Universidad de Melbourne (OR-Tools, Gurobi, Metaheurísticas)",
+          "⚠️ VACÍO CRÍTICO PLATZI: IO se estudia 100% con libros, cursos Coursera y práctica en Python"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "IO Integral: revisión profunda de PL, PE, Redes, PD, PNL, Simulación y Estocástica",
+          "Reinforcement Learning para IO: MDPs, Q-Learning, Deep Q-Networks aplicados a scheduling",
+          "Optimización combinatoria avanzada: CVRP, FJSSP, Bin Packing, Set Covering",
+          "Gurobi + Python: modelado avanzado, warm starts, callbacks, decomposición de Benders"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Scheduling Estocástico de Producción NAIU (SimPy + IO)",
+          "description": "Algoritmo completo de planificación de siembra, cosecha y distribución de NAIU considerando tiempos probabilísticos. Combina SimPy + OR-Tools + Prophet.",
+          "stack": "Python, SimPy, OR-Tools, Prophet, FastAPI, React",
+          "price": "$1000–$3000 USD/mes",
+          "connect": "S4, S6, S8, S11"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Gemelo Digital v1 de Granja NAIU",
+          "description": "Gemelo digital simplificado: modelos de crecimiento ML + sensores simulados IoT + módulo de optimización IO/RL. Predice rendimiento y simula escenarios what-if.",
+          "stack": "Python, SimPy, ML, OR-Tools, React, Docker",
+          "price": "$3000–$8000 USD proyecto",
+          "connect": "S6, S10, S12, S14"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "API de Optimización Logística VRP (SaaS B2B)",
+          "description": "SaaS donde empresas logísticas envían sus nodos, vehículos y ventanas de tiempo → el motor OR-Tools devuelve rutas óptimas + mapa interactivo + métricas.",
+          "stack": "Python, OR-Tools, FastAPI, React Maps, K8s, Stripe",
+          "price": "$1000–$3000 USD/mes",
+          "connect": "S7, S11, S14"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "TSP con Algoritmos Genéticos (Benchmark)",
+          "description": "Resolución del TSP para instancias de hasta 500 nodos con AG (DEAP) y comparación vs. heurísticas clásicas (2-opt, Lin-Kernighan). Paper técnico publicado.",
+          "stack": "Python, DEAP, OR-Tools, Jupyter, GitHub",
+          "price": "Portafolio / publicación técnica",
+          "connect": "S2, S11"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Optimización de Inventario con IA (EOQ + Pronóstico + Auto-orden)",
+          "description": "Sistema completo: EOQ dinámico + punto de reorden probabilístico + pronóstico de demanda ML → orden automática al proveedor por email/WhatsApp cuando stock baja.",
+          "stack": "Python, OR-Tools, Prophet, n8n, FastAPI",
+          "price": "$800–$2000 USD/mes",
+          "connect": "S1, S4, S7, S12"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "RL para Control Climático de Invernadero",
+          "description": "Agente Deep Q-Network (DQN) que aprende a controlar temperatura, humedad y ventilación del invernadero simulado para maximizar crecimiento de hongos.",
+          "stack": "Python, PyTorch, Gymnasium, SimPy, FastAPI",
+          "price": "$2000–$6000 USD proyecto",
+          "connect": "S10, S14"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Simulación Monte Carlo de Portafolio Agrícola",
+          "description": "Evaluación financiera de portafolio de cultivos bajo incertidumbre (precio mercado, clima, plagas). 50.000 simulaciones. Dashboard ejecutivo con métricas de riesgo.",
+          "stack": "Python, NumPy, SimPy, Plotly Dash, FastAPI",
+          "price": "$1500–$4000 USD",
+          "connect": "S8, S14"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "number": "S14",
+      "title": "Arquitectura SaaS Senior y Masterpieces",
+      "meta": "FASE 5 | Platzi 14h/sem + IO Autónoma 14h/sem = 28h totales/sem + sprints de proyecto",
+      "bloqueA": {
+        "title": "📗 BLOQUE A — PLATZI (14h/semana)",
+        "items": [
+          "Arquitectura Multi-tenant (aislamiento de datos, schemas, row-level security)",
+          "Patrones de Diseño de Software (Martin Fowler, Clean Architecture)",
+          "Liderazgo de Equipos Tecnológicos, Finanzas Empresariales, Economía para Ingenieros"
+        ]
+      },
+      "bloqueB": {
+        "title": "📕 BLOQUE B — IO AUTÓNOMA (14h/semana)",
+        "items": [
+          "Operations Research Scientist: preparación para entrevistas Google/OpenAI/Uber",
+          "Revisión de portafolio IO: documentación técnica de todos los modelos desarrollados",
+          "Publicación técnica: artículos Medium/LinkedIn sobre proyectos IO + IA más impactantes",
+          "Preparación para certificaciones: Google Professional ML Engineer, AWS ML Specialty"
+        ]
+      },
+      "bibliography": [],
+      "projects": [
+        {
+          "num": "#1",
+          "type": "NAIU",
+          "title": "Cerebro Central Ciberfísico NAIU",
+          "description": "Consolidación de TODOS los microservicios NAIU: IoT + Visión Artificial + ERP Angular + Scheduling IO + Predicción de Demanda + Gemelo Digital. Orquestado en K8s bajo arquitectura Lean.",
+          "stack": "K8s, Docker, FastAPI, Angular, ML, OR-Tools, LangChain",
+          "price": "Sistema propietario NAIU",
+          "connect": "TODOS los semestres anteriores"
+        },
+        {
+          "num": "#2",
+          "type": "NAIU",
+          "title": "Reseñas Automáticas + Venta 100% Automatizada NAIU",
+          "description": "Pago → factura DIAN → WhatsApp cliente → Telegram notificación. Post-venta 48h → calificación → si 5★ solicita reseña Google automáticamente.",
+          "stack": "n8n, Stripe, DIAN API, WhatsApp, Telegram, Google API",
+          "price": "Interno NAIU",
+          "connect": "S9, S11"
+        },
+        {
+          "num": "#3",
+          "type": "II",
+          "title": "Dapta Industrial — SaaS Multi-tenant",
+          "description": "Plataforma SaaS donde cientos de empresas conectan sus datos, arman agentes IA, flujos logísticos y motores de optimización IO. Facturación con Stripe Subscriptions.",
+          "stack": "Next.js, FastAPI, PostgreSQL multi-tenant, K8s, Stripe, OR-Tools, LangChain",
+          "price": "$100–$500 USD /empresa/mes",
+          "connect": "TODOS los semestres"
+        },
+        {
+          "num": "#4",
+          "type": "II",
+          "title": "Portafolio Senior Documentado + LinkedIn/GitHub Pro",
+          "description": "Refactorización Clean Code de repositorios clave. Documentación técnica y financiera. 5 artículos técnicos publicados. LinkedIn optimizado para roles Senior internacionales.",
+          "stack": "GitHub, Markdown, Medium, LinkedIn",
+          "price": "Inversión en carrera Senior",
+          "connect": "TODOS"
+        },
+        {
+          "num": "#5",
+          "type": "AUTO",
+          "title": "Ecosistema de Automatización Completo (Todos los niveles)",
+          "description": "Integración de todas las automatizaciones construidas: desde agendamiento (S1) hasta optimización de inventario (S13). Un dashboard maestro que muestra ROI de cada automatización.",
+          "stack": "n8n, React, FastAPI, PostgreSQL, Metabase",
+          "price": "$3000–$10000 USD/mes ecosistema",
+          "connect": "S1 a S13"
+        },
+        {
+          "num": "#6",
+          "type": "IA/DS",
+          "title": "Gemelo Digital Completo con RL",
+          "description": "Gemelo digital de planta agrícola/industrial completo: sensores IoT reales, modelos ML de crecimiento, agente RL de control autónomo, optimización IO de scheduling, dashboard 3D.",
+          "stack": "Python, PyTorch, OR-Tools, Unity/Blender API, K8s",
+          "price": "$5000–$15000 USD proyecto",
+          "connect": "S10, S11, S12, S13"
+        },
+        {
+          "num": "#7",
+          "type": "IA/DS",
+          "title": "Forward Deployed Engineer — Portafolio para Big Tech",
+          "description": "Documentación técnica ejecutiva de los 3 proyectos más impresionantes (Gemelo Digital, VRP SaaS, Dapta Industrial) formateada para aplicar a Google, OpenAI o Anthropic.",
+          "stack": "GitHub, Notion, Video demos, Deck ejecutivo",
+          "price": "Inversión en carrera Big Tech",
+          "connect": "TODOS"
+        }
+      ]
+    }
+  ]
+}
