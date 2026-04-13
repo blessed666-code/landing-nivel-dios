@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Avance — Plan Maestro Nivel Dios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">📊</span>
+                <span class="brand-text">Dashboard <span class="gold">Nivel Dios</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">← Plan Maestro</a>
+                <a href="#overview" class="nav-link active">Overview</a>
+                <a href="#malla" class="nav-link">Malla Curricular</a>
+                <a href="#proyectos-tracker" class="nav-link">Proyectos</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section dashboard-hero">
+        <div class="container">
+            <div class="dashboard-header">
+                <div>
+                    <h1 class="dashboard-title">Dashboard de Avance</h1>
+                    <p class="dashboard-subtitle">Malla Curricular · Plan Maestro Nivel Dios — Bendecido</p>
+                </div>
+                <div class="progress-ring-container">
+                    <div class="progress-ring" id="totalProgressRing">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" class="ring-bg"/>
+                            <circle cx="60" cy="60" r="52" class="ring-fill" id="ringFill"/>
+                        </svg>
+                        <div class="ring-text">
+                            <span class="ring-percent" id="totalPercent">0%</span>
+                            <span class="ring-label">Completado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card-icon">📚</div>
+                    <div class="stat-card-value" id="completedSemesters">0</div>
+                    <div class="stat-card-label">Semestres Completados</div>
+                    <div class="stat-card-total">de 14</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">🚀</div>
+                    <div class="stat-card-value" id="completedProjects">0</div>
+                    <div class="stat-card-label">Proyectos Completados</div>
+                    <div class="stat-card-total">de 98</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">⏱️</div>
+                    <div class="stat-card-value" id="totalHours">0</div>
+                    <div class="stat-card-label">Horas Invertidas</div>
+                    <div class="stat-card-total">estimadas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">🏆</div>
+                    <div class="stat-card-value" id="currentPhase">F1</div>
+                    <div class="stat-card-label">Fase Actual</div>
+                    <div class="stat-card-total">de 5 fases</div>
+                </div>
+            </div>
+
+            <!-- Phase Progress Bars -->
+            <div class="phases-progress">
+                <h3 class="section-subtitle">Progreso por Fase</h3>
+                <div class="phase-bars">
+                    <div class="phase-bar-item" data-phase="1">
+                        <div class="phase-bar-header">
+                            <span class="phase-bar-name">FASE 1 — Fundamentos</span>
+                            <span class="phase-bar-percent" id="phase1Percent">0%</span>
+                        </div>
+                        <div class="phase-bar-track">
+                            <div class="phase-bar-fill phase-fill-1" id="phase1Bar" style="width: 0%"></div>
+                        </div>
+                        <span class="phase-bar-semesters">S1 · S2</span>
+                    </div>
+                    <div class="phase-bar-item" data-phase="2">
+                        <div class="phase-bar-header">
+                            <span class="phase-bar-name">FASE 2 — Full-Stack</span>
+                            <span class="phase-bar-percent" id="phase2Percent">0%</span>
+                        </div>
+                        <div class="phase-bar-track">
+                            <div class="phase-bar-fill phase-fill-2" id="phase2Bar" style="width: 0%"></div>
+                        </div>
+                        <span class="phase-bar-semesters">S3 · S4 · S5</span>
+                    </div>
+                    <div class="phase-bar-item" data-phase="3">
+                        <div class="phase-bar-header">
+                            <span class="phase-bar-name">FASE 3 — Datos & Lean</span>
+                            <span class="phase-bar-percent" id="phase3Percent">0%</span>
+                        </div>
+                        <div class="phase-bar-track">
+                            <div class="phase-bar-fill phase-fill-3" id="phase3Bar" style="width: 0%"></div>
+                        </div>
+                        <span class="phase-bar-semesters">S6 · S7 · S8</span>
+                    </div>
+                    <div class="phase-bar-item" data-phase="4">
+                        <div class="phase-bar-header">
+                            <span class="phase-bar-name">FASE 4 — IA & DevOps</span>
+                            <span class="phase-bar-percent" id="phase4Percent">0%</span>
+                        </div>
+                        <div class="phase-bar-track">
+                            <div class="phase-bar-fill phase-fill-4" id="phase4Bar" style="width: 0%"></div>
+                        </div>
+                        <span class="phase-bar-semesters">S9 · S10 · S11</span>
+                    </div>
+                    <div class="phase-bar-item" data-phase="5">
+                        <div class="phase-bar-header">
+                            <span class="phase-bar-name">FASE 5 — Nivel Dios</span>
+                            <span class="phase-bar-percent" id="phase5Percent">0%</span>
+                        </div>
+                        <div class="phase-bar-track">
+                            <div class="phase-bar-fill phase-fill-5" id="phase5Bar" style="width: 0%"></div>
+                        </div>
+                        <span class="phase-bar-semesters">S12 · S13 · S14</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Malla Curricular -->
+    <section id="malla" class="section">
+        <div class="container">
+            <h2 class="section-title">🎓 Malla Curricular — Plan de Estudios</h2>
+            <p class="malla-description">Haz clic en cada semestre para marcar materias y proyectos como completados. Tu progreso se guarda automáticamente.</p>
+            
+            <div class="malla-grid">
+                <!-- Fase 1 -->
+                <div class="malla-fase">
+                    <div class="malla-fase-header fase-color-1">
+                        <span class="malla-fase-label">FASE 1</span>
+                        <span class="malla-fase-name">Fundamentos Lógico-Matemáticos y Frontend Web</span>
+                    </div>
+                    <div class="malla-semesters">
+                        <div class="malla-semester" data-semester="1">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S1</div>
+                                <div class="malla-sem-title">Lógica, Matemáticas Base y Maquetación</div>
+                                <div class="malla-sem-progress"><span id="s1Progress">0</span>/14</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="1" data-item="a1"> Matemáticas para Programación</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="1" data-item="a2"> Entorno, Terminal, Git y GitHub</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="1" data-item="a3"> Desarrollo Web (HTML, CSS, Tailwind, WCAG)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="1" data-item="a4"> Aprendizaje Continuo y Productividad</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="1" data-item="b1"> Introducción a la Ingeniería Industrial</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="1" data-item="b2"> Fundamentos de Programación Lineal</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="1" data-item="b3"> Matemáticas de Ingeniería I (Álgebra Lineal)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="1" data-item="p1"> Dashboard de Sensores NAIU v0</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="1" data-item="p2"> Gestión de Inventario de Esporas</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="1" data-item="p3"> Optimizador de Mezcla de Sustrato</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="1" data-item="p4"> Portafolio de Ingeniería Industrial</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="1" data-item="p5"> Agendamiento Inteligente v0</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="1" data-item="p6"> Calculadora Matricial en JS</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="1" data-item="p7"> Análisis Climático Invernadero</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="2">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S2</div>
+                                <div class="malla-sem-title">JavaScript Profundo y Álgebra Lineal</div>
+                                <div class="malla-sem-progress"><span id="s2Progress">0</span>/13</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="2" data-item="a1"> JavaScript 2025 (ES12+, DOM, Async)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="2" data-item="a2"> Álgebra Lineal para ML</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="2" data-item="a3"> Prompt Engineering e Intro IA</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="2" data-item="b1"> PL Avanzada: Simplex</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="2" data-item="b2"> Dualidad en PL</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="2" data-item="b3"> Análisis de Sensibilidad</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="2" data-item="p1"> Calculadora Mezcla Sustrato (Simplex)</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="2" data-item="p2"> Sistema de Recomendación de Riego v0</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="2" data-item="p3"> Resolución TSP Básico</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="2" data-item="p4"> Dashboard de KPIs de Producción</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="2" data-item="p5"> Gestor de Reseñas Automático Google</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="2" data-item="p6"> Widget de Cotización Dinámica</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="2" data-item="p7"> Consumo de API Pública con Análisis</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 2 -->
+                <div class="malla-fase">
+                    <div class="malla-fase-header fase-color-2">
+                        <span class="malla-fase-label">FASE 2</span>
+                        <span class="malla-fase-name">Desarrollo Full-Stack (Ecosistemas JS y Python)</span>
+                    </div>
+                    <div class="malla-semesters">
+                        <div class="malla-semester" data-semester="3">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S3</div>
+                                <div class="malla-sem-title">Bases de Datos, Node.js y React</div>
+                                <div class="malla-sem-progress"><span id="s3Progress">0</span>/13</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="3" data-item="a1"> BD, SQL y PostgreSQL</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="3" data-item="a2"> React.js (Hooks, Estado, Context)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="3" data-item="a3"> Backend Node.js (Express, REST)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="3" data-item="b1"> Programación Entera (PE)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="3" data-item="b2"> Modelos de Redes</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="3" data-item="b3"> OR-Tools y Gurobi</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="3" data-item="p1"> CRM Agrícola NAIU v1</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="3" data-item="p2"> Trazabilidad de Lotes de Siembra</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="3" data-item="p3"> API CRUD Gestión de Producción</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="3" data-item="p4"> Optimización Asignación Tareas (PE)</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="3" data-item="p5"> Cotizaciones WhatsApp con IA</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="3" data-item="p6"> Motor de Recomendación Simple</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="3" data-item="p7"> Detección Anomalías Sensores IoT</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="4">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S4</div>
+                                <div class="malla-sem-title">Backend Python, FastAPI y Matemáticas Discretas</div>
+                                <div class="malla-sem-progress"><span id="s4Progress">0</span>/14</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="4" data-item="a1"> Python Profesional (OOP)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="4" data-item="a2"> FastAPI (JWT, Pydantic)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="4" data-item="a3"> Django Fundamentos</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="4" data-item="a4"> Arquitectura de Software</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="4" data-item="a5"> Matemáticas Discretas</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="4" data-item="b1"> Gestión de Inventarios (EOQ, EPQ)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="4" data-item="b2"> Sistemas de Producción (MRP)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="4" data-item="p1"> API Validación Sensores IoT</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="4" data-item="p2"> Modelo EOQ Esporas NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="4" data-item="p3"> Sistema Pronóstico de Demanda</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="4" data-item="p4"> Optimizador de Grafos</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="4" data-item="p5"> Onboarding Automático Clientes</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="4" data-item="p6"> Sistema AuthaaS JWT</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="4" data-item="p7"> Modelo MRP I en Python</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="5">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S5</div>
+                                <div class="malla-sem-title">Angular, Next.js y Automatización Industrial</div>
+                                <div class="malla-sem-progress"><span id="s5Progress">0</span>/14</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="5" data-item="a1"> Angular (componentes, RxJS)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="5" data-item="a2"> Next.js (SSR, SSG, App Router)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="5" data-item="a3"> Automatización con IA (n8n, Make)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="5" data-item="b1"> Lean Manufacturing (VSM, Muda)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="5" data-item="b2"> 5S, Kaizen, Poka-Yoke, SMED</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="5" data-item="b3"> OEE y Six Sigma intro</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="5" data-item="p1"> Dashboard Directivo NAIU (Angular)</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="5" data-item="p2"> VSM Digital Producción Hongos</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="5" data-item="p3"> Blog SEO Ingeniería Industrial</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="5" data-item="p4"> Sistema Lean 5S Digital</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="5" data-item="p5"> Publicación RRSS Automática</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="5" data-item="p6"> Bot WhatsApp Ventas NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="5" data-item="p7"> Panel Admin Angular (Modular)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="malla-fase">
+                    <div class="malla-fase-header fase-color-3">
+                        <span class="malla-fase-label">FASE 3</span>
+                        <span class="malla-fase-name">Datos, Marketing y Operaciones Lean</span>
+                    </div>
+                    <div class="malla-semesters">
+                        <div class="malla-semester" data-semester="6">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S6</div>
+                                <div class="malla-sem-title">Ingeniería de Datos y Web Scraping</div>
+                                <div class="malla-sem-progress"><span id="s6Progress">0</span>/13</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="6" data-item="a1"> Ingeniería de Datos (ETL, Airflow)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="6" data-item="a2"> Datos a Gran Escala (Spark, Kafka)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="6" data-item="a3"> Web Scraping (Playwright)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="6" data-item="b1"> Simulación Industrial I (SimPy)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="6" data-item="b2"> Teoría de Colas</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="6" data-item="b3"> Distribuciones de Probabilidad</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="6" data-item="p1"> Pipeline ETL Sensores NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="6" data-item="p2"> Simulación Cola Pedidos (SimPy)</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="6" data-item="p3"> Scraper Precios Insumos</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="6" data-item="p4"> Modelo Teoría de Colas</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="6" data-item="p5"> Inteligencia Competitiva Auto</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="6" data-item="p6"> Data Warehouse Agrícola</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="6" data-item="p7"> Pipeline Datos IoT Tiempo Real</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="7">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S7</div>
+                                <div class="malla-sem-title">Business Intelligence y Marketing Automático</div>
+                                <div class="malla-sem-progress"><span id="s7Progress">0</span>/13</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="7" data-item="a1"> BI: Power BI, Tableau, SQL Analítico</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="7" data-item="a2"> Marketing Digital y Paid Media</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="7" data-item="a3"> IA para Content Marketing</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="7" data-item="b1"> Gestión SCM</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="7" data-item="b2"> Logística y Distribución</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="7" data-item="b3"> Método de Transporte</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="7" data-item="p1"> Dashboard BI Operativo NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="7" data-item="p2"> Modelo Transporte Distribución</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="7" data-item="p3"> Reportes BI Automatizado</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="7" data-item="p4"> Optimizador VRP Básico</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="7" data-item="p5"> Meta Ads con IA Completo</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="7" data-item="p6"> Predicción Demanda Series Temp.</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="7" data-item="p7"> Content Marketing 100% IA</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="8">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S8</div>
+                                <div class="malla-sem-title">Data Science, Probabilidad y Lean Ops</div>
+                                <div class="malla-sem-progress"><span id="s8Progress">0</span>/13</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="8" data-item="a1"> Probabilidad y Estadística Avanzada</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="8" data-item="a2"> Pandas y NumPy Profesional</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="8" data-item="a3"> Operaciones Lean (VSM, 5S)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="8" data-item="b1"> Simulación Industrial II (Monte Carlo)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="8" data-item="b2"> Programación Estocástica</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="8" data-item="b3"> Lean 4.0</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="8" data-item="p1"> Simulación Monte Carlo Supply Chain</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="8" data-item="p2"> Análisis Lean: Eliminación Muda</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="8" data-item="p3"> Auditoría Lean Automatizada</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="8" data-item="p4"> Dashboard Riesgo Supply Chain</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="8" data-item="p5"> Pipeline Ventas IA (Lead Scoring)</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="8" data-item="p6"> EDA Producción Agrícola</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="8" data-item="p7"> Modelo Bayesiano Diagnóstico Plagas</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 4 -->
+                <div class="malla-fase">
+                    <div class="malla-fase-header fase-color-4">
+                        <span class="malla-fase-label">FASE 4</span>
+                        <span class="malla-fase-name">Inteligencia Artificial y DevOps</span>
+                    </div>
+                    <div class="malla-semesters">
+                        <div class="malla-semester" data-semester="9">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S9</div>
+                                <div class="malla-sem-title">Machine Learning Clásico y Docker</div>
+                                <div class="malla-sem-progress"><span id="s9Progress">0</span>/13</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="9" data-item="a1"> Fundamentos de ML</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="9" data-item="a2"> ML con Scikit-Learn</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="9" data-item="a3"> Docker y Contenedores</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="9" data-item="b1"> Programación No Lineal (PNL)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="9" data-item="b2"> Métodos de Gradiente</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="9" data-item="b3"> Convexidad y PNL↔ML</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="9" data-item="p1"> Clasificador Calidad Hongos (ML)</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="9" data-item="p2"> Predictor Éxito Lote Siembra</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="9" data-item="p3"> Microservicio ML Scoring Leads</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="9" data-item="p4"> Mantenimiento Predictivo ML</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="9" data-item="p5"> Facturación DIAN Automática</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="9" data-item="p6"> Regresión Rendimiento Cultivo</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="9" data-item="p7"> Pipeline ML End-to-End Docker</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="10">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S10</div>
+                                <div class="malla-sem-title">Deep Learning, NLP y Cloud</div>
+                                <div class="malla-sem-progress"><span id="s10Progress">0</span>/14</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="10" data-item="a1"> Deep Learning (PyTorch/TF)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="10" data-item="a2"> NLP (RNNs, LSTMs, Transformers)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="10" data-item="a3"> Visión Artificial (OpenCV, YOLO)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="10" data-item="a4"> Cloud (AWS, GCP)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="10" data-item="b1"> Programación Dinámica (PD)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="10" data-item="b2"> PD↔Reinforcement Learning</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="10" data-item="b3"> Optimización Multi-objetivo</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="10" data-item="p1"> Visión Artificial YOLO Contaminación</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="10" data-item="p2"> Predicción Series Temporales LSTM</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="10" data-item="p3"> SaaS Análisis Sentimiento NLP</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="10" data-item="p4"> Optimización Dinámica Inventario</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="10" data-item="p5"> Soporte Omnicanal IA</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="10" data-item="p6"> CNN Clasificación Especies</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="10" data-item="p7"> Servidor AWS/GCP ML Producción</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="11">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S11</div>
+                                <div class="malla-sem-title">IA Generativa, LangChain y Kubernetes</div>
+                                <div class="malla-sem-progress"><span id="s11Progress">0</span>/14</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="11" data-item="a1"> IA Generativa (LangChain, Agentes)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="11" data-item="a2"> Voz con IA (ElevenLabs, Whisper)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="11" data-item="a3"> Kubernetes (K8s)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="11" data-item="a4"> Terraform (IaC)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="11" data-item="b1"> Metaheurísticas I (AG)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="11" data-item="b2"> Metaheurísticas II (SA, Tabú)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="11" data-item="b3"> Optimización Combinatoria</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="11" data-item="p1"> Ingeniero Agrónomo Virtual (Agente)</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="11" data-item="p2"> Recuperación Carrito + Voz IA</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="11" data-item="p3"> Empleado Autónomo Ventas</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="11" data-item="p4"> Scheduling AG (Job Shop)</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="11" data-item="p5"> Recuperación Pagos + Voz Auto</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="11" data-item="p6"> Clon ChatGPT LangChain</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="11" data-item="p7"> Arquitectura K8s 3 Capas</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 5 -->
+                <div class="malla-fase">
+                    <div class="malla-fase-header fase-color-5">
+                        <span class="malla-fase-label">FASE 5</span>
+                        <span class="malla-fase-name">Operaciones Nivel Dios y Arquitectura SaaS</span>
+                    </div>
+                    <div class="malla-semesters">
+                        <div class="malla-semester" data-semester="12">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S12</div>
+                                <div class="malla-sem-title">MLOps, CI/CD y Seguridad</div>
+                                <div class="malla-sem-progress"><span id="s12Progress">0</span>/13</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="12" data-item="a1"> CI/CD (GitHub Actions, Jenkins)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="12" data-item="a2"> MLOps (Coursera DeepLearning.AI)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="12" data-item="a3"> Seguridad (OWASP, Pentesting)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="12" data-item="b1"> Lean 4.0 Avanzado</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="12" data-item="b2"> Six Sigma Avanzado (DOE, ANOVA)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="12" data-item="b3"> Gestión Calidad Total (TQM)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="12" data-item="p1"> CI/CD Modelos NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="12" data-item="p2"> Monitoreo Data Drift NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="12" data-item="p3"> Plataforma MLOps Corporativa</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="12" data-item="p4"> DOE Automatizado Cultivos</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="12" data-item="p5"> BI Ejecutivo CEO Dashboard</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="12" data-item="p6"> Pipeline CI/CD Pruebas ML</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="12" data-item="p7"> Pentesting AWS Propia</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="13">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S13</div>
+                                <div class="malla-sem-title">IO: El Core Industrial</div>
+                                <div class="malla-sem-progress"><span id="s13Progress">0</span>/14</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="13" data-item="a1"> Algoritmos Avanzados (NP-hard)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="13" data-item="a2"> SimPy Avanzado</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="13" data-item="a3"> Discrete Optimization (Coursera)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="13" data-item="b1"> IO Integral (revisión completa)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="13" data-item="b2"> RL para IO (MDPs, DQN)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="13" data-item="b3"> Optimización Combinatoria Avanzada</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="13" data-item="b4"> Gurobi + Python Avanzado</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7)</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="13" data-item="p1"> Scheduling Estocástico NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="13" data-item="p2"> Gemelo Digital v1 Granja NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="13" data-item="p3"> API Optimización VRP (SaaS)</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="13" data-item="p4"> TSP con AG (Benchmark)</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="13" data-item="p5"> Optimización Inventario IA</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="13" data-item="p6"> RL Control Climático Invernadero</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="13" data-item="p7"> Monte Carlo Portafolio Agrícola</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="malla-semester" data-semester="14">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">S14</div>
+                                <div class="malla-sem-title">Arquitectura SaaS Senior y Masterpieces</div>
+                                <div class="malla-sem-progress"><span id="s14Progress">0</span>/13</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <h5>📗 Bloque A — Platzi</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="14" data-item="a1"> Arquitectura Multi-tenant</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="14" data-item="a2"> Patrones de Diseño (Clean Arch)</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="14" data-item="a3"> Liderazgo y Finanzas</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>📕 Bloque B — IO Autónoma</h5>
+                                    <label class="malla-item"><input type="checkbox" data-sem="14" data-item="b1"> Prep. Entrevistas OR Scientist</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="14" data-item="b2"> Revisión Portafolio IO</label>
+                                    <label class="malla-item"><input type="checkbox" data-sem="14" data-item="b3"> Certificaciones (Google ML, AWS)</label>
+                                </div>
+                                <div class="malla-category">
+                                    <h5>🚀 Proyectos (7) — MASTERPIECES</h5>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg masterpiece-item"><input type="checkbox" data-sem="14" data-item="p1"> ⭐ Cerebro Central Ciberfísico NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-naiu-bg"><input type="checkbox" data-sem="14" data-item="p2"> Reseñas + Venta 100% Auto NAIU</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg masterpiece-item"><input type="checkbox" data-sem="14" data-item="p3"> ⭐ Dapta Industrial SaaS Multi-tenant</label>
+                                    <label class="malla-item proyecto-item tipo-ii-bg"><input type="checkbox" data-sem="14" data-item="p4"> Portafolio Senior + LinkedIn Pro</label>
+                                    <label class="malla-item proyecto-item tipo-auto-bg"><input type="checkbox" data-sem="14" data-item="p5"> Ecosistema Automatización Completo</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg masterpiece-item"><input type="checkbox" data-sem="14" data-item="p6"> ⭐ Gemelo Digital Completo con RL</label>
+                                    <label class="malla-item proyecto-item tipo-ia-bg"><input type="checkbox" data-sem="14" data-item="p7"> Forward Deployed Engineer Portfolio</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra Nivel Dios -->
+                <div class="malla-fase">
+                    <div class="malla-fase-header fase-color-extra">
+                        <span class="malla-fase-label">EXTRA</span>
+                        <span class="malla-fase-name">Proyectos Extra Nivel Dios (Post-Graduación)</span>
+                    </div>
+                    <div class="malla-semesters">
+                        <div class="malla-semester" data-semester="extra">
+                            <div class="malla-sem-header">
+                                <div class="malla-sem-number">🏆</div>
+                                <div class="malla-sem-title">Nivel Dios — Post-Graduación</div>
+                                <div class="malla-sem-progress"><span id="sextraProgress">0</span>/5</div>
+                            </div>
+                            <div class="malla-sem-body">
+                                <div class="malla-category">
+                                    <label class="malla-item proyecto-item masterpiece-item"><input type="checkbox" data-sem="extra" data-item="e1"> 📄 Paper ArXiv: Scheduling Agrícola con RL</label>
+                                    <label class="malla-item proyecto-item masterpiece-item"><input type="checkbox" data-sem="extra" data-item="e2"> 🏅 Competencia Kaggle / NeurIPS Workshop</label>
+                                    <label class="malla-item proyecto-item masterpiece-item"><input type="checkbox" data-sem="extra" data-item="e3"> 🚀 Lanzar Dapta Industrial (10 clientes beta)</label>
+                                    <label class="malla-item proyecto-item masterpiece-item"><input type="checkbox" data-sem="extra" data-item="e4"> 🎓 Certificación Google Professional ML Engineer</label>
+                                    <label class="malla-item proyecto-item masterpiece-item"><input type="checkbox" data-sem="extra" data-item="e5"> 🌎 Aplicar a OR Scientist (Uber/Google/DoorDash)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>📊 Dashboard de Avance — Plan Maestro Nivel Dios · Bendecido</p>
+                <p>Tu progreso se guarda automáticamente en el navegador</p>
+                <div class="footer-actions">
+                    <a href="index.html" class="btn btn-secondary">← Volver al Plan Maestro</a>
+                    <button class="btn btn-danger" id="resetBtn">🗑️ Resetear Progreso</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

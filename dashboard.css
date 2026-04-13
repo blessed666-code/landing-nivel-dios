@@ -1,0 +1,564 @@
+/* ============================================
+   DASHBOARD SPECIFIC STYLES
+   ============================================ */
+
+.dashboard-body {
+    background: var(--bg-primary);
+}
+
+.dashboard-hero {
+    padding-top: 120px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.dashboard-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dashboard-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+/* Progress Ring */
+.progress-ring-container {
+    flex-shrink: 0;
+}
+
+.progress-ring {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.progress-ring svg {
+    transform: rotate(-90deg);
+    width: 120px;
+    height: 120px;
+}
+
+.ring-bg {
+    fill: none;
+    stroke: var(--border-color);
+    stroke-width: 8;
+}
+
+.ring-fill {
+    fill: none;
+    stroke: url(#goldGradient);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 326.73;
+    stroke-dashoffset: 326.73;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.ring-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ring-percent {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--gold);
+}
+
+.ring-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-light);
+}
+
+.stat-card-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.stat-card-value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat-card-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.stat-card-total {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Phase Progress Bars */
+.phases-progress {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.phase-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.phase-bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.phase-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phase-bar-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.phase-bar-percent {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.phase-bar-track {
+    height: 12px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.phase-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.8s ease;
+    min-width: 0;
+}
+
+.phase-fill-1 { background: linear-gradient(90deg, #4488ff, #66aaff); }
+.phase-fill-2 { background: linear-gradient(90deg, #22cc88, #44ddaa); }
+.phase-fill-3 { background: linear-gradient(90deg, #ff8833, #ffaa55); }
+.phase-fill-4 { background: linear-gradient(90deg, #8855ff, #aa77ff); }
+.phase-fill-5 { background: linear-gradient(90deg, #f0c040, #ffdd66); }
+
+.phase-bar-semesters {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ============================================
+   MALLA CURRICULAR
+   ============================================ */
+.malla-description {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 48px;
+    font-size: 1rem;
+}
+
+.malla-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.malla-fase {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.malla-fase-header {
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.fase-color-1 { background: linear-gradient(135deg, rgba(68,136,255,0.15), rgba(68,136,255,0.05)); border-bottom: 2px solid rgba(68,136,255,0.3); }
+.fase-color-2 { background: linear-gradient(135deg, rgba(34,204,136,0.15), rgba(34,204,136,0.05)); border-bottom: 2px solid rgba(34,204,136,0.3); }
+.fase-color-3 { background: linear-gradient(135deg, rgba(255,136,51,0.15), rgba(255,136,51,0.05)); border-bottom: 2px solid rgba(255,136,51,0.3); }
+.fase-color-4 { background: linear-gradient(135deg, rgba(136,85,255,0.15), rgba(136,85,255,0.05)); border-bottom: 2px solid rgba(136,85,255,0.3); }
+.fase-color-5 { background: linear-gradient(135deg, rgba(240,192,64,0.15), rgba(240,192,64,0.05)); border-bottom: 2px solid rgba(240,192,64,0.3); }
+.fase-color-extra { background: linear-gradient(135deg, rgba(240,192,64,0.2), rgba(255,136,51,0.1)); border-bottom: 2px solid rgba(240,192,64,0.4); }
+
+.malla-fase-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 2px;
+    background: rgba(240,192,64,0.1);
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.malla-fase-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.malla-semesters {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Semester in Malla */
+.malla-semester {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.malla-semester:hover {
+    border-color: var(--border-light);
+}
+
+.malla-sem-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: rgba(255,255,255,0.02);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.malla-sem-header:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+.malla-sem-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 800;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    min-width: 40px;
+}
+
+.malla-sem-title {
+    font-size: 1rem;
+    font-weight: 600;
+    flex: 1;
+}
+
+.malla-sem-progress {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.05);
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.malla-sem-body {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.malla-category h5 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.malla-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    user-select: none;
+}
+
+.malla-item:hover {
+    background: rgba(255,255,255,0.03);
+    color: var(--text-primary);
+}
+
+.malla-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-light);
+    border-radius: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.malla-item input[type="checkbox"]:checked {
+    background: var(--accent-green);
+    border-color: var(--accent-green);
+}
+
+.malla-item input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.malla-item input[type="checkbox"]:checked + span,
+.malla-item:has(input:checked) {
+    color: var(--accent-green);
+}
+
+/* Completed items get strikethrough */
+.malla-item:has(input:checked) {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Project type backgrounds */
+.proyecto-item {
+    border-left: 3px solid transparent;
+    margin-left: 4px;
+}
+
+.tipo-naiu-bg { border-left-color: var(--accent-green); }
+.tipo-ii-bg { border-left-color: var(--accent-red); }
+.tipo-auto-bg { border-left-color: var(--accent-orange); }
+.tipo-ia-bg { border-left-color: var(--accent-blue); }
+
+.masterpiece-item {
+    background: rgba(240, 192, 64, 0.05) !important;
+    border-left-color: var(--gold) !important;
+    font-weight: 600;
+}
+
+/* Semester toggle */
+.malla-semester.collapsed .malla-sem-body {
+    display: none;
+}
+
+.malla-sem-header::after {
+    content: '▼';
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.malla-semester.collapsed .malla-sem-header::after {
+    transform: rotate(-90deg);
+}
+
+/* Completed semester */
+.malla-semester.completed {
+    border-color: var(--accent-green);
+}
+
+.malla-semester.completed .malla-sem-header {
+    background: rgba(34, 204, 136, 0.05);
+}
+
+.malla-semester.completed .malla-sem-number {
+    background: linear-gradient(135deg, var(--accent-green), #44ddaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.malla-semester.completed .malla-sem-progress {
+    background: rgba(34, 204, 136, 0.15);
+    color: var(--accent-green);
+}
+
+/* Footer */
+.footer-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-danger {
+    background: rgba(255, 68, 102, 0.1);
+    color: var(--accent-red);
+    border: 1px solid rgba(255, 68, 102, 0.3);
+}
+
+.btn-danger:hover {
+    background: rgba(255, 68, 102, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .dashboard-title {
+        font-size: 1.8rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .stat-card {
+        padding: 16px;
+    }
+    
+    .stat-card-value {
+        font-size: 1.8rem;
+    }
+    
+    .malla-fase-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px 20px;
+    }
+    
+    .malla-semesters {
+        padding: 16px;
+    }
+    
+    .malla-sem-header {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+    }
+    
+    .malla-sem-body {
+        padding: 16px;
+    }
+    
+    .phases-progress {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ============================================
+   TOAST NOTIFICATION
+   ============================================ */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--accent-green);
+    border-radius: var(--radius-md);
+    padding: 16px 24px;
+    color: var(--accent-green);
+    font-weight: 600;
+    font-size: 0.9rem;
+    z-index: 10000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 40px rgba(34, 204, 136, 0.2);
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
